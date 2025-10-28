@@ -39,12 +39,15 @@ public class BankAccount {
     }
 
     public static void main(String[] args) {
-        BankAccount bankAccount = new BankAccount("Nguyen Van A", 10000.00);
-        BankAccount bankAccount1 = new BankAccount("Son Tung M-TP", 200000.00);
+        BankAccount bankAccount = new BankAccount("Nguyen Van A", 8000.00);
+        BankAccount bankAccount1 = new BankAccount("Son Tung M-TP", 2800.00);
+        BankAccount bankAccount2 = new BankAccount();
+        bankAccount2.name = "Diep Nguyen";
+        bankAccount2.balance = 5000.00;
 
         bankAccount.withdraw(2500);
         bankAccount.display();
-
+        bankAccount2.display();
         bankAccount1.deposit(3000);
         bankAccount1.display();
 
