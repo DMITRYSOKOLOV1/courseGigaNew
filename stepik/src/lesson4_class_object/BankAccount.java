@@ -5,23 +5,15 @@ public class BankAccount {
     private String name;
     private double balance;
 
-    // Статическая переменная для генерации уникального ID
-    private static int nextId = 1;
+    public BankAccount() {
+    }
 
     // Конструктор с именем и балансом, ID генерируется автоматически
-    public BankAccount(String name, double balance) {
-        this.id = nextId++;
+    public BankAccount(int id, String name, double balance) {
+        this.id = id;
         this.name = name;
         this.balance = balance;
     }
-
-    // Пустой конструктор (если нужно)
-    public BankAccount() {
-        this.id = nextId++;
-        this.name = "Unnamed";
-        this.balance = 0.0;
-    }
-
     public void deposit(double amount) {
         if (amount > 0) {
             this.balance += amount;
@@ -39,9 +31,11 @@ public class BankAccount {
     }
 
     public static void main(String[] args) {
-        BankAccount bankAccount = new BankAccount("Nguyen Van A", 8000.00);
-        BankAccount bankAccount1 = new BankAccount("Son Tung M-TP", 2800.00);
+        BankAccount bankAccount = new BankAccount(1, "Son Tung M-TP", 1000.00);
+        BankAccount bankAccount1 = new BankAccount(2, "Nguyen Van A", 2000.00);
         BankAccount bankAccount2 = new BankAccount();
+
+        bankAccount2.id = 3;
         bankAccount2.name = "Diep Nguyen";
         bankAccount2.balance = 5000.00;
 
