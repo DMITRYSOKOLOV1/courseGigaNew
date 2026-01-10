@@ -51,5 +51,6 @@ public class BankAccount {
         }
          */
         bankAccount.display();
+        bankAccount1.display();
     }
 }
