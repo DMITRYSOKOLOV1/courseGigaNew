@@ -7,8 +7,6 @@ public class BankAccount {
 
     public BankAccount() {
     }
-
-    // Конструктор с именем и балансом, ID генерируется автоматически
     public BankAccount(int id, String name, double balance) {
         this.id = id;
         this.name = name;
@@ -34,6 +32,7 @@ public class BankAccount {
         BankAccount bankAccount = new BankAccount(1, "Son Tung M-TP", 1000.00);
         BankAccount bankAccount1 = new BankAccount(2, "Nguyen Van A", 2000.00);
         BankAccount bankAccount2 = new BankAccount();
+        /*
 
         bankAccount2.id = 3;
         bankAccount2.name = "Diep Nguyen";
@@ -50,5 +49,7 @@ public class BankAccount {
         } else {
             System.out.println("Account 2 is bigger than Account 1");
         }
+         */
+        bankAccount.display();
     }
 }
